@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="bn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<script src='//libtl.com/sdk.js' data-zone='9824504' data-sdk='show_9824504'></script>
+<title>EarnPro – এড দেখে ইনকাম</title>
+<style>
+:root{--bg:#0b1020;--c:#151c33;--c2:#1d2646;--t:#eef2ff;--m:#8d98bb;--p:#22d3a0;--p2:#6366f1;--l:#26305a;--bad:#f43f5e;--warn:#f59e0b;--pt:#04231a}
+@media(prefers-color-scheme:light){:root{--bg:#f1f4fb;--c:#fff;--c2:#eef1fb;--t:#141a33;--m:#5f6a8c;--p:#0a9f77;--p2:#4f46e5;--l:#dde3f3;--pt:#fff}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--t);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;line-height:1.5;padding-top:env(safe-area-inset-top,0)}
+.w{max-width:480px;margin:0 auto;padding:16px 16px 110px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.logo{font-weight:800;font-size:20px}.logo b{color:var(--p)}
+.chip{background:var(--c);border:1px solid var(--l);border-radius:99px;padding:5px 12px;font-size:13px;color:var(--m)}
+.hero{background:linear-gradient(135deg,var(--p2),#8b5cf6 55%,var(--p));border-radius:22px;padding:20px;color:#fff;box-shadow:0 10px 30px rgba(99,102,241,.35);margin-bottom:14px}
+.hero small{opacity:.85}.hero .big{font-size:40px;font-weight:800;letter-spacing:-1px}
+.hero .st{display:flex;gap:10px;margin-top:12px}.hero .st div{flex:1;background:rgba(255,255,255,.16);border-radius:12px;padding:8px 10px;font-size:13px}.hero .st b{display:block;font-size:16px}
+.card{background:var(--c);border:1px solid var(--l);border-radius:18px;padding:16px;margin-bottom:14px}
+h3{margin:0 0 10px;font-size:16px}.m{color:var(--m);font-size:14px}
+.dots{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin-top:10px}
+.dots i{aspect-ratio:1;border-radius:50%;background:var(--c2);border:1px solid var(--l)}.dots i.on{background:var(--p);border-color:var(--p);box-shadow:0 0 8px var(--p)}
+.ring{width:150px;height:150px;border-radius:50%;margin:6px auto 14px;display:grid;place-items:center;background:conic-gradient(var(--p) calc(var(--v)*1%),var(--c2) 0)}
+.ring div{width:118px;height:118px;border-radius:50%;background:var(--c);display:grid;place-items:center;text-align:center;font-size:13px;color:var(--m)}.ring b{display:block;font-size:30px;color:var(--t);line-height:1}
+button{font:inherit;border:0;border-radius:14px;padding:14px;background:linear-gradient(135deg,var(--p),#10b981);color:var(--pt);font-weight:700;width:100%;cursor:pointer;font-size:16px}
+button:disabled{opacity:.45}button.g{background:var(--c2);color:var(--t);border:1px solid var(--l)}
+input{font:inherit;width:100%;padding:13px;border-radius:12px;border:1px solid var(--l);background:var(--c2);color:var(--t);margin:6px 0}
+input:focus{outline:2px solid var(--p2)}
+.mm{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0}
+.mm label{border:2px solid var(--l);border-radius:12px;padding:10px 4px;text-align:center;font-weight:700;font-size:14px;cursor:pointer}
+.mm input{display:none}.mm input:checked+span{color:#fff}
+.mm label.s{border-color:var(--p);background:var(--c2)}
+.q{display:flex;gap:8px;margin:4px 0 8px}.q button{padding:8px;font-size:13px;background:var(--c2);color:var(--t);border:1px solid var(--l);border-radius:10px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--l);font-size:14px}
+.bd{padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700}.pending{background:#f59e0b33;color:var(--warn)}.paid{background:#22d3a033;color:var(--p)}.rejected{background:#f43f5e33;color:var(--bad)}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--c);border-top:1px solid var(--l);display:flex;padding:8px 8px calc(8px + env(safe-area-inset-bottom,0));z-index:5}
+nav button{background:none;color:var(--m);font-size:12px;padding:6px 0;font-weight:600;border-radius:10px}nav button span{display:block;font-size:20px}nav button.on{color:var(--p)}
+.toast{position:fixed;top:calc(12px + env(safe-area-inset-top,0));left:50%;transform:translateX(-50%);background:var(--t);color:var(--bg);padding:10px 18px;border-radius:99px;font-size:14px;font-weight:600;z-index:9;opacity:0;transition:.25s;pointer-events:none;max-width:92%;text-align:center}.toast.show{opacity:1}
+.h{display:none}
+.sum{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}.sum div{background:var(--c);border:1px solid var(--l);border-radius:14px;padding:10px;text-align:center;font-size:12px;color:var(--m)}.sum b{display:block;font-size:18px;color:var(--t)}
+.tabs{display:flex;gap:6px;margin-bottom:12px}.tabs button{padding:8px;font-size:13px;background:var(--c2);color:var(--t);border:1px solid var(--l)}.tabs button.on{background:var(--p2);color:#fff}
+</style></head><body><div class="w">
+<div id="toast" class="toast"></div>
+
+<!-- ADMIN -->
+<div id="adm" class="h">
+ <div class="top"><div class="logo">Earn<b>Pro</b> Admin</div></div>
+ <div class="card"><input id="apw" type="password" placeholder="অ্যাডমিন পাসওয়ার্ড"><button onclick="aload()">প্রবেশ করুন</button></div>
+ <div id="apanel" class="h">
+  <div class="sum"><div>পেন্ডিং<b id="s1">0</b></div><div>পরিশোধিত<b id="s2">0</b></div><div>বকেয়া টাকা<b id="s3">৳0</b></div></div>
+  <div class="tabs"><button class="on" onclick="aflt('pending',this)">পেন্ডিং</button><button onclick="aflt('paid',this)">পরিশোধিত</button><button onclick="aflt('rejected',this)">বাতিল</button></div>
+  <div id="alist"></div>
+ </div>
+</div>
+
+<!-- AUTH -->
+<div id="auth" class="h">
+ <div class="top"><div class="logo">Earn<b>Pro</b></div></div>
+ <div class="hero"><small>এড দেখুন, প্রতিদিন ইনকাম করুন</small><div class="big">৳৫০ / দিন</div><small>২০টি কাজ · বিকাশ, নগদ, রকেটে উইথড্র</small></div>
+ <div class="card"><h3>অ্যাকাউন্টে প্রবেশ</h3>
+  <input id="ph" inputmode="numeric" maxlength="11" placeholder="মোবাইল নম্বর 01XXXXXXXXX">
+  <input id="pw" type="password" placeholder="পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)">
+  <button onclick="login('login')">লগইন</button><div style="height:8px"></div><button class="g" onclick="login('register')">নতুন অ্যাকাউন্ট খুলুন</button></div>
+</div>
+
+<!-- APP -->
+<div id="app" class="h">
+ <div class="top"><div class="logo">Earn<b>Pro</b></div><div class="chip" id="me"></div></div>
+ <div class="card" style="border-color:#f59e0b;color:#f59e0b"><b>🧪 পরীক্ষামূলক মোড</b><div class="m">এখানে দেখানো ব্যালেন্স ও উত্তোলন সম্পূর্ণ ডেমো। কোনো আসল টাকা দেওয়া হবে না।</div></div>
+
+ <section id="home">
+  <div class="hero"><small>মোট ব্যালেন্স</small><div class="big">৳<span id="bal">0</span></div>
+   <div class="st"><div>আজকের আয়<b>৳<span id="te">0</span></b></div><div>বাকি কাজ<b id="left">20</b></div></div></div>
+  <div class="card"><h3>আজকের অগ্রগতি</h3>
+   <div class="ring" id="ring" style="--v:0"><div><span><b id="done">0</b>/২০ কাজ</span></div></div>
+   <button onclick="tab('task')">কাজ শুরু করুন →</button></div>
+  <div class="card"><h3>নিয়ম</h3><div class="m">• প্রতি কাজে ৳২.৫০<br>• এড শেষ পর্যন্ত দেখতে হবে<br>• দৈনিক সর্বোচ্চ ২০টি কাজ<br>• সর্বনিম্ন উইথড্র ৳১০০</div></div>
+ </section>
+
+ <section id="task" class="h">
+  <div class="card"><h3>এড দেখে ইনকাম করুন</h3>
+   <p class="m">পরীক্ষার জন্য বাটন চাপলেই ডেমো ৳২.৫০ যোগ হবে। কোনো বিজ্ঞাপন দেখা বা আসল পেমেন্ট হবে না।</p>
+   <button id="go">🧪 ডেমো রিওয়ার্ড নিন</button>
+   <div class="dots" id="dots"></div>
+   <p class="m" id="msg" style="margin-bottom:0"></p></div>
+ </section>
+
+ <section id="wd" class="h">
+  <div class="card"><h3>টাকা উঠান</h3><div class="m">উপলব্ধ ব্যালেন্স: ৳<b id="bal2">0</b> · সর্বনিম্ন ৳১০০</div>
+   <div class="mm" id="mm"></div>
+   <input id="num" inputmode="numeric" maxlength="11" placeholder="মোবাইল নম্বর">
+   <input id="amt" inputmode="decimal" placeholder="পরিমাণ (৳)">
+   <div class="q"><button onclick="setA(100)">১০০</button><button onclick="setA(200)">২০০</button><button onclick="setA(500)">৫০০</button><button onclick="setA(0)">সব</button></div>
+   <button onclick="withdraw()">রিকোয়েস্ট পাঠান</button></div>
+  <div class="card"><h3>ইতিহাস</h3><div id="hist" class="m">কিছু নেই</div></div>
+ </section>
+
+ <section id="pf" class="h">
+  <div class="card"><h3>প্রোফাইল</h3><div class="m">নম্বর: <b id="me2"></b></div><p></p><button class="g" onclick="logout()">লগআউট</button></div>
+ </section>
+
+ <nav><button data-t="home" class="on"><span>🏠</span>হোম</button><button data-t="task"><span>🎬</span>কাজ</button><button data-t="wd"><span>💸</span>উইথড্র</button><button data-t="pf"><span>👤</span>প্রোফাইল</button></nav>
+</div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);let T='',D=null,METHOD='বিকাশ';
+try{T=localStorage.getItem('tk')||''}catch(e){}
+function toast(t){const e=$('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600)}
+async function api(u,body){const r=await fetch(u,{method:body?'POST':'GET',headers:{'content-type':'application/json','x-token':T},body:body?JSON.stringify(body):undefined});let d={};try{d=await r.json()}catch(e){}if(!r.ok)throw new Error(d.error||'সার্ভার সমস্যা');return d}
+function draw(d){D=d;const f=n=>n.toFixed(2);
+ $('bal').textContent=f(d.bal);$('bal2').textContent=f(d.bal);$('te').textContent=f(d.done*d.rate);
+ $('done').textContent=d.done;$('left').textContent=d.daily-d.done;$('ring').style.setProperty('--v',d.done/d.daily*100);
+ $('me').textContent=d.phone;$('me2').textContent=d.phone;$('go').disabled=d.done>=d.daily;
+ $('dots').innerHTML=Array.from({length:d.daily},(_,i)=>`<i class="${i<d.done?'on':''}"></i>`).join('');
+ if(d.done>=d.daily)$('msg').textContent='আজকের সব কাজ শেষ 🎉 কাল আবার আসুন।';
+ const S={pending:'পেন্ডিং',paid:'পরিশোধিত',rejected:'বাতিল'};
+ $('hist').innerHTML=d.history.length?d.history.map(h=>`<div class="row"><span>${h.method} · ${h.number}<br><small>${new Date(h.time).toLocaleDateString('bn-BD')}</small></span><span>৳${h.amount} <span class="bd ${h.status}">${S[h.status]}</span></span></div>`).join(''):'কিছু নেই'}
+function show(id){['adm','auth','app'].forEach(x=>$(x).classList.toggle('h',x!==id))}
+function tab(t){['home','task','wd','pf'].forEach(x=>$(x).classList.toggle('h',x!==t));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));scrollTo(0,0)}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>tab(b.dataset.t));
+$('mm').innerHTML=['বিকাশ','নগদ','রকেট'].map((m,i)=>`<label class="${i?'':'s'}" data-m="${m}">${m}</label>`).join('');
+document.querySelectorAll('#mm label').forEach(l=>l.onclick=()=>{METHOD=l.dataset.m;document.querySelectorAll('#mm label').forEach(x=>x.classList.toggle('s',x===l))});
+function setA(v){$('amt').value=v||(D?D.bal:0)}
+async function start(){
+ if(location.hash==='#admin')return show('adm');
+ try{draw(await api('/api/me'));show('app')}catch(e){show('auth')}}
+async function login(k){try{const d=await api('/api/'+k,{phone:$('ph').value,password:$('pw').value});T=d.token;try{localStorage.setItem('tk',T)}catch(e){}start()}catch(e){toast(e.message)}}
+function logout(){T='';try{localStorage.removeItem('tk')}catch(e){}tab('home');start()}
+let busy=false;
+$('go').onclick=async()=>{if(busy)return;
+ busy=true;$('go').disabled=true;$('msg').textContent='ডেমো রিওয়ার্ড যোগ হচ্ছে...';
+ try{draw(await api('/api/reward',{}));$('msg').textContent='';toast('🧪 ডেমো ৳২.৫০ যোগ হয়েছে')}
+ catch(e){toast(e.message)}
+ finally{busy=false;if(D)$('go').disabled=D.done>=D.daily;if(!D||D.done<D.daily)$('msg').textContent=''}};
+async function withdraw(){try{draw(await api('/api/withdraw',{method:METHOD,number:$('num').value,amount:$('amt').value}));toast('রিকোয়েস্ট জমা হয়েছে ✅');$('amt').value=''}catch(e){toast(e.message)}}
+
+/* ADMIN */
+let AP='',AL=[],AF='pending';
+async function aapi(u,o={}){const r=await fetch(u,Object.assign({headers:{'content-type':'application/json','x-admin':AP}},o));let d={};try{d=await r.json()}catch(e){}if(!r.ok)throw new Error(d.error||'সমস্যা');return d}
+async function aload(){AP=$('apw').value||AP;try{AL=await aapi('/api/admin/withdrawals');$('apanel').classList.remove('h');arender()}catch(e){toast(e.message)}}
+function aflt(f,b){AF=f;document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));arender()}
+function arender(){const p=AL.filter(w=>w.status==='pending'),pd=AL.filter(w=>w.status==='paid');
+ $('s1').textContent=p.length;$('s2').textContent=pd.length;$('s3').textContent='৳'+p.reduce((a,w)=>a+w.amount,0);
+ const L=AL.filter(w=>w.status===AF);
+ $('alist').innerHTML=L.length?L.map(w=>`<div class="card"><div class="row" style="border:0;padding:0"><b style="font-size:18px">৳${w.amount}</b><span class="bd ${w.status}">${w.method}</span></div>
+ <div class="m">প্রাপক নম্বর: <b style="color:var(--t)">${w.number}</b><br>ইউজার: ${w.phone}<br>${new Date(w.time).toLocaleString('bn-BD')}</div>
+ ${w.status==='pending'?`<p></p><button onclick="aact('${w.id}','paid')">✅ পরিশোধ করেছি</button><div style="height:8px"></div><button class="g" onclick="aact('${w.id}','rejected')">❌ বাতিল (টাকা ফেরত)</button>`:''}</div>`).join(''):'<div class="card m">কোনো রিকোয়েস্ট নেই</div>'}
+async function aact(id,a){if(!confirm(a==='paid'?'টাকা পাঠানো হয়েছে?':'বাতিল করে ইউজারকে টাকা ফেরত দেবেন?'))return;try{await aapi('/api/admin/withdrawals/'+id,{method:'POST',body:JSON.stringify({action:a})});toast('সম্পন্ন');aload()}catch(e){toast(e.message)}}
+addEventListener('hashchange',()=>location.reload());
+start();
+</script></body></html>
